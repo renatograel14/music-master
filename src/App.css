@@ -1,0 +1,129 @@
+body {
+  background-color: rgb(34, 35, 38);
+  color: white;
+}
+
+.clr {
+  clear: both;
+}
+/*** bootstrap rewrite ***/
+.input-group-addon {
+  background: white;
+  transition: all 100ms ease-out;
+}
+
+.input-group-addon:hover {
+  box-shadow: 0 0 5px 1px #ddd;
+}
+
+.input-group-addon:active {
+  background: #ddd;
+}
+/*************************/
+
+.app-title {
+  font-size: 26px;
+  text-align: center;
+  margin: 30px;
+}
+
+.login-btn {
+  float: right;
+  margin: 10px 0;
+}
+
+.profile {
+  margin: 50px 0;
+  display: flex;
+  justify-content: center;
+}
+@media screen and (max-width: 480px) {
+  .profile {
+    display: block;
+  }
+
+  .profile-img {
+    margin: 0 auto !important;
+  }
+}
+
+.profile-info {
+  max-width: 500px;
+  text-transform: capitalize;
+  text-align: left;
+  flex-direction: column;
+}
+
+.profile-img {
+  margin: 0 20px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 150px;
+  min-width: 150px;
+  max-height: 150px;
+  max-width: 150px;
+  border-radius: 150px;
+
+  box-shadow: 0 0 1px 2px #fff;
+}
+
+.track {
+  overflow: hidden;
+  display: inline-block;
+  width: 220px;
+  height: 220px;
+  border-radius: 10px;
+  margin: 10px;
+  text-align: left;
+  cursor: pointer;
+  position: relative;
+}
+
+.track-img {
+  object-fit: cover;
+  width: 220px;
+  height: 220px;
+  position: absolute;
+  z-index: -10;
+}
+
+.track-title {
+  background: black;
+  opacity: .75;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.track-play {
+  visibility: hidden;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  background: rgba(0, 0, 0, .5);
+  transition: opacity 300ms ease;
+}
+
+.track-play span {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  padding: 20px;
+  border-radius: 50%;
+  border: 1px solid white;
+
+}
+
+.track:hover .track-play {
+  opacity: 1;
+  visibility: visible;
+}
+
+.track-play .warning {
+  border: none !important;
+}
